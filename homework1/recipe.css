@@ -37,10 +37,10 @@ a{
 	color: rgb(164,164,0);
 }
 .val{
-	text-align: right;
+	text-align: left;
 }
 .copy{
-	text-align: right;
+	text-align: left;
 }
 blockquote{
 	background-color: rgb(255,255,168);
