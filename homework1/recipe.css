@@ -6,7 +6,7 @@ h2{
 	font-weight: normal;
 	font-size: 18pt;
 	letter-spacing: 0.25em;
-	
+	display: inline-flex;
 }
 .menu{
 	list-style-type: none;
@@ -21,6 +21,7 @@ h2{
 	background-color:#f0f0f0 ;
 	color: #a4a400;
 text-decoration: underline;
+
 }
 body{
 	color: rgb(64,64,64);
