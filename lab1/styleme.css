@@ -8,6 +8,7 @@
     li{
         color: black;font-family: Arial, Helvetica, sans-serif;
         font-size: 22px; font-weight: 100;
+        unicode-bidi: ;
     }
     body{
         background-color: rgb(83, 241, 241);
