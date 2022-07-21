@@ -132,8 +132,12 @@ margin: 4px;
     }
     dt{
         font-weight: bold;
+        padding: 5px;
+        
     }
     dd{
         margin-bottom: 10pt;
     }
-   
+   dd li{
+    list-style: none;
+   }
