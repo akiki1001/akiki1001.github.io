@@ -4,7 +4,8 @@
 
 
  
-    alert("Hello, World!");
+
+
 
 document.getElementById("btn3").onclick= function(){
     alert("Hello, World!");
