@@ -1,4 +1,5 @@
 var accountInfo = [];
+;
 
 var bankApp = (function(){
 	var name = "";
@@ -16,6 +17,8 @@ var bankApp = (function(){
 	
 	return{
 		createAccount:function(){
+			
+
 			name = document.getElementById("name").value;
 			balance = document.getElementById("deposit").value;
 			
@@ -28,6 +31,8 @@ var bankApp = (function(){
 	}
 	
 })();
+
+
 
 document.getElementById("submitbtn").onclick = bankApp.createAccount;
 myFunction2();
@@ -99,6 +104,7 @@ select.appendChild(el);
 
 function myFunction() {
 	var x = document.getElementById("firstsdiv");
+	
 	if (x.style.display === "none") {
 	  x.style.display = "block";
 	} else {
@@ -107,6 +113,7 @@ function myFunction() {
   }
 
 function myFunction2() {
+	
 	var x = document.getElementById("second");
 	if (x.style.display === "none") {
 	  x.style.display = "block";
@@ -128,8 +135,9 @@ function myFunction2() {
 	//let x;
   for(var i = 0; i < accountInfo.length; i++) {
 	if(accountInfo[i].name===document.getElementById("debit3").value){
-		accountInfo[i]= parseInt(accountInfo[i].balance)+parseInt(document.getElementById("amount").value);
+		let y= parseInt(accountInfo[i].balance)+parseInt(document.getElementById("amount").value);
 		//var x=parseInt(document.getElementById("amount").value);
+		accountInfo[i.balance]=y;
 		var x=accountInfo[i];
 	}
 	}
@@ -140,7 +148,7 @@ function deposit2(){
 	//let x;
   for(var i = 0; i < accountInfo.length; i++) {
 	if(accountInfo[i].name===document.getElementById("debit3").value){
-		accountInfo[i]= parseInt(accountInfo[i].balance)-parseInt(document.getElementById("amount1").value);
+		accountInfo[i].balance= parseInt(accountInfo[i].balance)-parseInt(document.getElementById("amount1").value);
 		var x=parseInt(document.getElementById("amount1").value);
 	}
 	}
@@ -149,11 +157,14 @@ function deposit2(){
 }
 
 function showData2(){
+	
 	var dataText = "";
 	for(let i = 0; i < accountInfo.length; i++){
-		dataText +="Account name: "+accountInfo[i].name +" Balance: "+ parseInt(accountInfo[i].balance)+"\n";
+		dataText +="Account name: "+accountInfo[i].name +" Balance: "+ accountInfo[i].balance +"\n";
 	}
 	document.getElementById("ouput").value = dataText;
 	
 }
+
+
 
