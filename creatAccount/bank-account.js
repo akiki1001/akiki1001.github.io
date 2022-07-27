@@ -37,12 +37,12 @@ var bankApp = (function(){
 document.getElementById("submitbtn").onclick = bankApp.createAccount;
 myFunction2();
 myFunction3();
+document.getElementById("Deposit").onclick = deposit;
 document.getElementById("debit").onclick = debit;
-document.getElementById("Deposit").onclick = debit2;
-document.getElementById("deposit1").onclick = deposit;
-document.getElementById("debit4").onclick = deposit2;
-document.getElementById("submit1").onclick = main;
-document.getElementById("submit2").onclick = main2;
+document.getElementById("depositAmount").onclick = depositAmount;
+document.getElementById("debitAmount").onclick = debitAmount;
+document.getElementById("submitDeposit").onclick = main;
+document.getElementById("submitDebit").onclick = main2;
 
 function main(){
 	myFunction()
@@ -60,7 +60,7 @@ function main2(){
 }
 
 
-function debit(){
+function deposit(){
 	
 	myFunction();
 	myFunction2();
@@ -69,7 +69,7 @@ function debit(){
 	
 }
 
-function debit2(){
+function debit(){
 	
 	myFunction();
 	myFunction3();
@@ -77,21 +77,13 @@ function debit2(){
 	helll();
 	
 }
-function showData2(){
-	var dataText = "";
-	for(let i = 0; i < accountInfo.length; i++){
-		dataText +="Account name: "+accountInfo[i].name +" Balance: "+ accountInfo[i].balance+"\n";
-	}
-	document.getElementById("ouput").value = dataText;
-	
-}
 
 
 
 
 function helll(){
-	//document.getElementById("debit").style.display=none;
-	var select = document.getElementById("debit3");
+	
+	var select = document.getElementById("DropDownlist");
 
 for(var i = 0; i < accountInfo.length; i++) {
 var opt = accountInfo[i].name;
@@ -131,24 +123,22 @@ function myFunction2() {
 	}
   }
 
-  function deposit(){
-	//let x;
+  function depositAmount(){
+
   for(var i = 0; i < accountInfo.length; i++) {
-	if(accountInfo[i].name===document.getElementById("debit3").value){
-		let y= parseInt(accountInfo[i].balance)+parseInt(document.getElementById("amount").value);
+	if(accountInfo[i].name===document.getElementById("DropDownlist").value){
+		accountInfo[i].balance= parseInt(accountInfo[i].balance)+parseInt(document.getElementById("amount").value);
 		var x=parseInt(document.getElementById("amount").value);
-		accountInfo[i].balance=y;
-		
-		
+				
 	}
 	}
 	document.getElementById("amount").value="";
 	alert(x + " is Deposited");
 }
-function deposit2(){
-	//let x;
+function debitAmount(){
+
   for(var i = 0; i < accountInfo.length; i++) {
-	if(accountInfo[i].name===document.getElementById("debit3").value){
+	if(accountInfo[i].name===document.getElementById("DropDownlist").value){
 		accountInfo[i].balance= parseInt(accountInfo[i].balance)-parseInt(document.getElementById("amount1").value);
 		var x=parseInt(document.getElementById("amount1").value);
 	}
