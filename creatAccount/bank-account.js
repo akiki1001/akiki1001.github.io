@@ -136,9 +136,10 @@ function myFunction2() {
   for(var i = 0; i < accountInfo.length; i++) {
 	if(accountInfo[i].name===document.getElementById("debit3").value){
 		let y= parseInt(accountInfo[i].balance)+parseInt(document.getElementById("amount").value);
-		//var x=parseInt(document.getElementById("amount").value);
-		accountInfo[i.balance]=y;
-		var x=accountInfo[i];
+		var x=parseInt(document.getElementById("amount").value);
+		accountInfo[i].balance=y;
+		
+		
 	}
 	}
 	document.getElementById("amount").value="";
