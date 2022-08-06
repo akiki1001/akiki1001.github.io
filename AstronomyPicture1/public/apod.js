@@ -12,15 +12,10 @@ function getPicture() {
     error: noPicture,
   });
 console.log('getpic');
-  // $.get("https://api.nasa.gov/planetary/apod", {
-  //   data: { api_key: "gyhaJ2GQ5PF58E8w6iESVvscg2en3nrGcOqczI2s", date: $("#date").val() },
-  //   dataType: "json",
-  //   success: showPicture,
-  //   error: noPicture,
-  // });
 }
 function showPicture(data) {
   $("#pic").attr("src", data.url);
+  $("#title").text(data.title);
 }
 function noPicture(error) {
   alert(error.responseText);
