@@ -6,7 +6,7 @@ function getPicture() {
   $.ajax({
     url: "https://api.nasa.gov/planetary/apod",
     type: "GET",
-    data: { api_key: "gyhaJ2GQ5PF58E8w6iESVvscg2en3nrGcOqczI2s", date: $("#date").val() },
+    data: { api_key: "qE9rRMxMcwGraEpqosaSyuusdHzCKBnSm0JdC21L", date: $("#date").val() },
     dataType: "json",
     success: showPicture,
     error: noPicture,
